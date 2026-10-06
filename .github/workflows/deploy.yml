@@ -12,9 +12,9 @@ jobs:
       - name: Sync to host
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          server: ${{ secrets.FTP_106.0.62.70 }}
+          username: ${{ secrets.FTP_lolo@qualityseo.org }}
+          password: ${{ secrets.FTP_Q,t=k&MADZJoR}22 }}
           protocol: ftps          # use ftp only if the host has no FTPS
           port: 21
           local-dir: ./          # repo root is the document root
