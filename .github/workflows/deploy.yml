@@ -1,0 +1,28 @@
+name: Deploy site
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Sync to host
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps          # use ftp only if the host has no FTPS
+          port: 21
+          local-dir: ./          # repo root is the document root
+          server-dir: ./         # change to public_html/ or www/ if the host needs it
+          dry-run: true          # set to false after reviewing the first dry-run log
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/.env
