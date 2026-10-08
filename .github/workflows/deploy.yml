@@ -13,8 +13,8 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_106.0.62.70 }}
-          username: ${{ secrets.FTP_lolo@qualityseo.org }}
-          password: ${{ secrets.FTP_Q,t=k&MADZJoR}22 }}
+          username: ${{ secrets.FTP_g }}
+          password: ${{ secrets.FTP_ }}
           protocol: ftps          # use ftp only if the host has no FTPS
           port: 21
           local-dir: ./          # repo root is the document root
